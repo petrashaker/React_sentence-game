@@ -21,12 +21,12 @@ const QWho = ({handleText, handleIcon}) => {
     }
 
     return (
-        <>
-        <Link to="/"><AiOutlineArrowLeft /></Link>
+        <div className="flex">
+        <Link to="/"><AiOutlineArrowLeft className="arrow" /></Link>
         <h3>Who</h3>
-        <input type="text" value={text} onChange={handleChange}/>
-        <Link to="/what"><AiOutlineArrowRight /></Link>
-        </>
+        <input type="text" className="input" value={text} onChange={handleChange} />
+        <Link to="/what"><AiOutlineArrowRight className="arrow" /></Link>
+        </div>
     )
 }
 

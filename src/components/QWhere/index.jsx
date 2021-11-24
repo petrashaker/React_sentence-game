@@ -21,12 +21,12 @@ const QWhere = ({handleText, handleIcon}) => {
         setIcon(!icon)
     }
         return (
-            <>
-            <Link to="/when"><AiOutlineArrowLeft /></Link>
+            <div className="flex">
+            <Link to="/when"><AiOutlineArrowLeft className="arrow" /></Link>
             <h3>Where</h3>
-            <input type="text" value={text} onChange={handleChange}/>
-            <Link to="/result"><AiOutlineArrowRight /></Link>
-            </>
+            <input type="text" className="input" value={text} onChange={handleChange}/>
+            <Link to="/result"><AiOutlineArrowRight className="arrow" /></Link>
+            </div>
         )
 }
 

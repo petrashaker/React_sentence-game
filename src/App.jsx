@@ -16,35 +16,21 @@ const App = () => {
   const [textWhat, setTextWhat] = useState();
   const [textWhen, setTextWhen] = useState();
   const [textWhere, setTextWhere] = useState();
+  
   const [iconWho, setIconWho] = useState();
   const [iconWhat, setIconWhat] = useState();
   const [iconWhen, setIconWhen] = useState();
   const [iconWhere, setIconWhere] = useState();
 
-  const handleWho = (textWho) => {
-    setTextWho(textWho);
-  }
-  const handleWhat = (textWhat) => {
-    setTextWhat(textWhat);
-  }
-  const handleWhen = (textWhen) => {
-    setTextWhen(textWhen);
-  }
-  const handleWhere = (textWhere) => {
-    setTextWhere(textWhere);
-  }
-  const handleIconWho = (iconWho) => {
-    setIconWho(iconWho);
-  }
-  const handleIconWhat = (iconWhat) => {
-    setIconWhat(iconWhat);
-  }
-  const handleIconWhen = (iconWhen) => {
-    setIconWhen(iconWhen);;
-  }
-  const handleIconWhere = (iconWhere) => {
-    setIconWhere(iconWhere);
-  }
+  const handleWho = (textWho) => { setTextWho(textWho);}
+  const handleWhat = (textWhat) => { setTextWhat(textWhat); }
+  const handleWhen = (textWhen) => { setTextWhen(textWhen); }
+  const handleWhere = (textWhere) => { setTextWhere(textWhere); }
+  
+  const handleIconWho = (iconWho) => { setIconWho(iconWho); }
+  const handleIconWhat = (iconWhat) => { setIconWhat(iconWhat); }
+  const handleIconWhen = (iconWhen) => { setIconWhen(iconWhen); }
+  const handleIconWhere = (iconWhere) => { setIconWhere(iconWhere); }
 
   return (
 
@@ -58,15 +44,15 @@ const App = () => {
       </nav>
 
       <div className="icons">
-      {iconWho ? <AiFillCheckCircle /> : <AiOutlineCheckCircle /> }
-      {iconWhat ? <AiFillCheckCircle /> : <AiOutlineCheckCircle /> }
-      {iconWhen ? <AiFillCheckCircle /> : <AiOutlineCheckCircle /> }
-      {iconWhere ? <AiFillCheckCircle /> : <AiOutlineCheckCircle /> }
+      {iconWho ? <AiFillCheckCircle className="icon"/> : <AiOutlineCheckCircle className="icon"/> }
+      {iconWhat ? <AiFillCheckCircle className="icon" /> : <AiOutlineCheckCircle className="icon"/> }
+      {iconWhen ? <AiFillCheckCircle className="icon"/> : <AiOutlineCheckCircle className="icon"/> }
+      {iconWhere ? <AiFillCheckCircle className="icon"/> : <AiOutlineCheckCircle className="icon"/> }
       </div>
 
       <Routes>
         <Route path="/" element={ <Sentence /> } />
-        <Route path="/who" element={ <QWho handleText={handleWho} handleIcon={handleIconWho}/> } />
+        <Route path="/who" element={ <QWho handleText={handleWho} handleIcon={handleIconWho} /> } />
         <Route path="/what" element={ <QWhat handleText={handleWhat} handleIcon={handleIconWhat}/> } />
         <Route path="/when" element={ <QWhen handleText={handleWhen} handleIcon={handleIconWhen}/> } />
         <Route path="/where" element={ <QWhere handleText={handleWhere} handleIcon={handleIconWhere}/> } />

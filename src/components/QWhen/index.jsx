@@ -22,12 +22,12 @@ const QWhen = ({handleText, handleIcon}) => {
     }
     
     return (
-        <>
-        <Link to="/what"><AiOutlineArrowLeft /></Link>
+        <div className="flex">
+        <Link to="/what"><AiOutlineArrowLeft className="arrow" /></Link>
         <h3>When</h3>
-        <input type="text" value={text} onChange={handleChange}/>
-        <Link to="/where"><AiOutlineArrowRight /></Link>
-        </>
+        <input type="text" className="input" value={text} onChange={handleChange}/>
+        <Link to="/where"><AiOutlineArrowRight className="arrow" /></Link>
+        </div>
     )
 }
 
