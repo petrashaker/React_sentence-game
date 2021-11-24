@@ -35,6 +35,14 @@ const App = () => {
   return (
 
     <BrowserRouter className="page">
+       
+       <div className="icons">
+        {iconWho ? <AiFillCheckCircle className="icon"/> : <AiOutlineCheckCircle className="icon"/> }
+        {iconWhat ? <AiFillCheckCircle className="icon" /> : <AiOutlineCheckCircle className="icon"/> }
+        {iconWhen ? <AiFillCheckCircle className="icon"/> : <AiOutlineCheckCircle className="icon"/> }
+        {iconWhere ? <AiFillCheckCircle className="icon"/> : <AiOutlineCheckCircle className="icon"/> }
+      </div>
+
       <nav className="nav">
         <Link to="/who" className="nav__link">Who?</Link>
         <Link to="/what" className="nav__link">What?</Link>
@@ -43,12 +51,7 @@ const App = () => {
         <Link to="/result" className="nav__link">Your sentence:</Link>
       </nav>
 
-      <div className="icons">
-      {iconWho ? <AiFillCheckCircle className="icon"/> : <AiOutlineCheckCircle className="icon"/> }
-      {iconWhat ? <AiFillCheckCircle className="icon" /> : <AiOutlineCheckCircle className="icon"/> }
-      {iconWhen ? <AiFillCheckCircle className="icon"/> : <AiOutlineCheckCircle className="icon"/> }
-      {iconWhere ? <AiFillCheckCircle className="icon"/> : <AiOutlineCheckCircle className="icon"/> }
-      </div>
+     
 
       <Routes>
         <Route path="/" element={ <Sentence /> } />
